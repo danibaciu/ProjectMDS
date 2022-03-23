@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     {
         MovementInput();
         RotationInput();
+        HandleShootInput();
     }
     void MovementInput()
     {
@@ -34,5 +35,12 @@ public class PlayerController : MonoBehaviour
         {
             transform.LookAt(new Vector3(hit.point.x, transform.position.y, hit.point.z));
         }
+    }
+
+    void HandleShootInput() {
+            if (Input.GetButton("Fire1")) 
+            {
+                    PlayerGun.Instance.Shoot();
+            }
     }
 }
