@@ -7,6 +7,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float  speed;
 
+    [SerializeField]
+    private GameObject corp;
+
+    private Animator anim;
+
+    void Start()
+    {
+        anim = corp.GetComponent<Animator>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +32,7 @@ public class PlayerController : MonoBehaviour
         Vector3 dir = new Vector3(x, 0f,z).normalized;
 
         transform.Translate(dir *speed* Time.deltaTime, Space.World );
+        anim.SetFloat("Speed", Mathf.Abs(x)+Mathf.Abs(z)); 
 
 
     }

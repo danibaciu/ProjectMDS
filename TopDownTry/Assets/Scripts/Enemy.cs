@@ -5,7 +5,10 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField]
     public float health;
+
+    [SerializeField]
     public float waitTime;
 
     private float currentTime;
