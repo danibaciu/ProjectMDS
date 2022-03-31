@@ -31,4 +31,5 @@ public class Projectile : MonoBehaviour
         transform.Translate(Vector3.forward * projectileSpeed * Time.deltaTime);
     }
 
+
 }

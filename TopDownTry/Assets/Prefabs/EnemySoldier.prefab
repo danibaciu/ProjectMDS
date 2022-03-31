@@ -1010,6 +1010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   waitTime: 7
+  corp: {fileID: 187294}
 --- !u!195 &-3992024483524616409
 NavMeshAgent:
   m_ObjectHideFlags: 0
