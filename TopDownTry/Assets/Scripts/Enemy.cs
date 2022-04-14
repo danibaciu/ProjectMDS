@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour
 
         float distance = Vector3.Distance(player.transform.position, transform.position);
 
-        if (distance < minDistance && player.transform.hasChanged)
+        if (distance < minDistance && player.transform.hasChanged && nav.isActiveAndEnabled)
         {
             nav.isStopped = false;
 
@@ -70,7 +70,7 @@ public class Enemy : MonoBehaviour
 
 
         }
-        else
+        else if(nav.isActiveAndEnabled)
             nav.isStopped = true;
     }
 

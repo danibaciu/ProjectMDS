@@ -1383,9 +1383,85 @@ PrefabInstance:
       propertyPath: m_StoppingDistance
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: -1626167952631902170, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_Size.y
+      value: 2.1250834
+      objectReference: {fileID: 0}
+    - target: {fileID: -1626167952631902170, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_Center.y
+      value: 0.56254166
+      objectReference: {fileID: 0}
+    - target: {fileID: -1626167952631902170, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 109714, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 112320, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 119946, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 131024, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 131052, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 139176, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 142714, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 144682, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 147322, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 152414, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 165746, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 178728, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 182096, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 187294, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_Name
       value: EnemySoldier (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 187294, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 188900, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 195204, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 477772, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_RootOrder
@@ -1431,9 +1507,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9539400, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7859481040095736336, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: minDistance
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8887727599797049310, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
