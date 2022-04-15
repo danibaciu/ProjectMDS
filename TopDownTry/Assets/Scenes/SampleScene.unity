@@ -226,17 +226,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+
     - target: {fileID: -3992024483524616409, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_StoppingDistance
       value: 1
       objectReference: {fileID: 0}
+
     - target: {fileID: 187294, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_Name
       value: EnemySoldier
       objectReference: {fileID: 0}
     - target: {fileID: 477772, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_RootOrder
+
       value: 3
+
       objectReference: {fileID: 0}
     - target: {fileID: 477772, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_LocalPosition.x
@@ -278,10 +282,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+
     - target: {fileID: 7859481040095736336, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: minDistance
       value: 10
       objectReference: {fileID: 0}
+
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
 --- !u!1 &360558129
@@ -1118,17 +1124,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+
     - target: {fileID: -3992024483524616409, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_StoppingDistance
       value: 6
       objectReference: {fileID: 0}
+
     - target: {fileID: 187294, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_Name
       value: EnemySoldier (1)
       objectReference: {fileID: 0}
     - target: {fileID: 477772, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_RootOrder
+
       value: 2
+
       objectReference: {fileID: 0}
     - target: {fileID: 477772, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1170,10 +1180,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+
     - target: {fileID: 7859481040095736336, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: minDistance
       value: 10
       objectReference: {fileID: 0}
+
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
 --- !u!1 &963194225
@@ -1379,6 +1391,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+
     - target: {fileID: -3992024483524616409, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_StoppingDistance
       value: 6
@@ -1447,10 +1460,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+
     - target: {fileID: 187294, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_Name
       value: EnemySoldier (2)
       objectReference: {fileID: 0}
+
     - target: {fileID: 187294, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1463,6 +1478,7 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+
     - target: {fileID: 477772, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1507,6 +1523,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+
     - target: {fileID: 9539400, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1519,6 +1536,7 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
 --- !u!1 &1974102348 stripped
