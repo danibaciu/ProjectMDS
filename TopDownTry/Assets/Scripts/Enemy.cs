@@ -21,6 +21,10 @@ public class Enemy : MonoBehaviour
     private float curent_x=0;
     private float curent_z=0;
 
+    public float minDistance;
+
+
+
     //public Transform target;
 
     NavMeshAgent nav;
@@ -58,7 +62,24 @@ public class Enemy : MonoBehaviour
             currentTime += 1 * Time.deltaTime;
         if (currentTime >= waitTime)
             currentTime = 0;
+
+
+        float distance = Vector3.Distance(player.transform.position, transform.position);
+
+        if (distance < minDistance && player.transform.hasChanged && nav.isActiveAndEnabled)
+        {
+            nav.isStopped = false;
+
+            this.transform.LookAt(player.transform);
+            nav.SetDestination(player.transform.position);
+
+
+        }
+        else if(nav.isActiveAndEnabled)
+            nav.isStopped = true;
+=======
         nav.SetDestination(player.transform.position);
+
     }
 
     //trebuie scriptul de shoot si bullet de la Dani

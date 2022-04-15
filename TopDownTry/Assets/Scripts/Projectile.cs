@@ -12,6 +12,9 @@ public class Projectile : MonoBehaviour
     [SerializeField]
     private float maxProjectileDistance;
 
+    private GameObject triggeringEnemy;
+    public float damage;
+
     void Start()
     {
         firingPoint = transform.position;
@@ -29,6 +32,16 @@ public class Projectile : MonoBehaviour
             transform.Translate(Vector3.forward * projectileSpeed * Time.deltaTime);
         }
         transform.Translate(Vector3.forward * projectileSpeed * Time.deltaTime);
+    }
+
+    
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.tag=="Enemy")
+        {
+            triggeringEnemy = other.gameObject;
+            triggeringEnemy.GetComponent<Enemy>().health -= damage;
+        }
     }
 
 
