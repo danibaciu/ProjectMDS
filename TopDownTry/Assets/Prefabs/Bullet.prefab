@@ -13,12 +13,10 @@ GameObject:
   - component: {fileID: 1538081211953266441}
   - component: {fileID: 2467015830090494217}
   - component: {fileID: 5901358822118114470}
-
   - component: {fileID: -5147828116672579682}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
-
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,9 +92,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4580833394291909631}
   m_Material: {fileID: 0}
-
   m_IsTrigger: 1
-
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -115,7 +111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 15
   maxProjectileDistance: 20
-
   damage: 25
 --- !u!54 &-5147828116672579682
 Rigidbody:
@@ -133,4 +128,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
-

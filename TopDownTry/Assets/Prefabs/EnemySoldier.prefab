@@ -497,9 +497,7 @@ GameObject:
   - component: {fileID: 2372806}
   m_Layer: 0
   m_Name: Head_german_gasmask
-
   m_TagString: Enemy
-
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -579,9 +577,7 @@ GameObject:
   - component: {fileID: 13704098}
   m_Layer: 0
   m_Name: Body_german_C
-
   m_TagString: Enemy
-
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -979,13 +975,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187294}
   m_Material: {fileID: 0}
-
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 2.159899, z: 1}
   m_Center: {x: 0, y: 0.5799496, z: 0}
-
 --- !u!54 &8887727599797049310
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1017,9 +1011,7 @@ MonoBehaviour:
   health: 100
   waitTime: 7
   corp: {fileID: 187294}
-
   minDistance: 0
-
 --- !u!195 &-3992024483524616409
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1054,9 +1046,7 @@ GameObject:
   - component: {fileID: 13767808}
   m_Layer: 0
   m_Name: backpack_flamethrower
-
   m_TagString: Enemy
-
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
