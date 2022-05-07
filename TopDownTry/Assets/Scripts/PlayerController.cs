@@ -7,11 +7,24 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float  speed;
 
+    [SerializeField]
+    private GameObject corp;
+
+    private Animator anim;
+
+    public float points;
+
+    void Start()
+    {
+        anim = corp.GetComponent<Animator>();
+    }
+
     // Update is called once per frame
     void Update()
     {
         MovementInput();
         RotationInput();
+        HandleShootInput();
     }
     void MovementInput()
     {
@@ -21,6 +34,7 @@ public class PlayerController : MonoBehaviour
         Vector3 dir = new Vector3(x, 0f,z).normalized;
 
         transform.Translate(dir *speed* Time.deltaTime, Space.World );
+        anim.SetFloat("Speed", Mathf.Abs(x)+Mathf.Abs(z)); 
 
 
     }
@@ -34,5 +48,12 @@ public class PlayerController : MonoBehaviour
         {
             transform.LookAt(new Vector3(hit.point.x, transform.position.y, hit.point.z));
         }
+    }
+
+    void HandleShootInput() {
+            if (Input.GetButton("Fire1")) 
+            {
+                    PlayerGun.Instance.Shoot();
+            }
     }
 }
