@@ -12,9 +12,11 @@ public class Enemy : MonoBehaviour
     public float waitTime;
 
     [SerializeField]
+
     private float pointsToGive;
 
     [SerializeField]
+
     private GameObject corp;
 
     private float currentTime;
@@ -82,6 +84,7 @@ public class Enemy : MonoBehaviour
     {
         Destroy(this.gameObject);
         player.GetComponent<PlayerController>().points += pointsToGive;
+
     }
     public void Shoot()
     {

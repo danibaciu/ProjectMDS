@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     private GameObject corp;
 
     private Animator anim;
-
     public float points;
 
     void Start()

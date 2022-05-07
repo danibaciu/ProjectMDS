@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -282,6 +282,7 @@ PrefabInstance:
       propertyPath: minDistance
       value: 10
       objectReference: {fileID: 0}
+
     - target: {fileID: 7859481040095736336, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: pointsToGive
       value: 30
@@ -770,6 +771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 12
   corp: {fileID: 1974102348}
+
   points: 0
 --- !u!1 &690290472
 GameObject:
@@ -1179,10 +1181,12 @@ PrefabInstance:
       propertyPath: minDistance
       value: 10
       objectReference: {fileID: 0}
+
     - target: {fileID: 7859481040095736336, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: pointsToGive
       value: 40
       objectReference: {fileID: 0}
+
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
 --- !u!1 &963194225
@@ -1524,10 +1528,12 @@ PrefabInstance:
       propertyPath: minDistance
       value: 20
       objectReference: {fileID: 0}
+
     - target: {fileID: 7859481040095736336, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: pointsToGive
       value: 50
       objectReference: {fileID: 0}
+
     - target: {fileID: 8887727599797049310, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 3}
       propertyPath: m_IsKinematic
       value: 1
