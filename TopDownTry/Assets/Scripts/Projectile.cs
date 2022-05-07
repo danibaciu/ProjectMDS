@@ -12,8 +12,11 @@ public class Projectile : MonoBehaviour
     [SerializeField]
     private float maxProjectileDistance;
 
+    [SerializeField]
+    private float damage;
+
     private GameObject triggeringEnemy;
-    public float damage;
+    
     void Start()
     {
         firingPoint = transform.position;

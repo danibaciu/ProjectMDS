@@ -12,12 +12,11 @@ public class Enemy : MonoBehaviour
     public float waitTime;
 
     [SerializeField]
-
-    private float pointsToGive;
+    private GameObject corp;
 
     [SerializeField]
-
-    private GameObject corp;
+    private float pointsToGive;
+    
 
     private float currentTime;
     private GameObject player;
@@ -49,42 +48,48 @@ public class Enemy : MonoBehaviour
         curent_x = x;
         curent_z = z;
 
+        //nav.SetDestination(player.transform.position);
+        float distance = Vector3.Distance(player.transform.position, transform.position);
+        this.transform.LookAt(player.transform);
+
+        if (distance < minDistance && player.transform.hasChanged)
+        {
+
+            
+            nav.SetDestination(player.transform.position);
+
+        }
+
 
         if(health <= 0)
         {
             Die();
         }
-        this.transform.LookAt(player.transform);
+        // if player in range -> Shoot;
         if(currentTime==0)
         {
-            Shoot();
+            if(distance < minDistance && player.transform.hasChanged)
+            {
+                EnemyGun.Instance.Shoot();
+            }
         }
         if (shot && currentTime < waitTime)
             currentTime += 1 * Time.deltaTime;
         if (currentTime >= waitTime)
             currentTime = 0;
 
-        float distance = Vector3.Distance(player.transform.position, transform.position);
+        
+        
+        
 
-        if (distance < minDistance && player.transform.hasChanged && nav.isActiveAndEnabled)
-        {
-            nav.isStopped = false;
-
-            this.transform.LookAt(player.transform);
-            nav.SetDestination(player.transform.position);
-
-
-        }
-        else if(nav.isActiveAndEnabled)
-            nav.isStopped = true;
     }
 
-    //trebuie scriptul de shoot si bullet de la Dani
+
     public void Die()
     {
-        Destroy(this.gameObject);
         player.GetComponent<PlayerController>().points += pointsToGive;
-
+        Destroy(this.gameObject);
+        
     }
     public void Shoot()
     {
