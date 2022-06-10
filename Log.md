@@ -4,3 +4,4 @@
 - System Viata jucator ( click pe obiectul Player si observati campul phealt in script. Are o valoare mare ptc nu avem meniu GameOver inca, dar pt test puteti sa il setati la 100 si sa vedeti cum jucatorul moare)
 - Modificat valori pt range-ul inamicilor si distanta maxima la care se pot apropia de tine.
 - Corectat greseli in Script Inamici cand te urmaresc (Erau niste conditii puse prost acolo. Vezi Enemy.cs de la linia 51 pana la linia 93 )
+- Modificat niste parametri si setari in enemy prefab
