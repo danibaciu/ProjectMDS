@@ -43,6 +43,10 @@ public class Projectile : MonoBehaviour
             triggeringEnemy = other.gameObject;
             triggeringEnemy.GetComponent<Enemy>().health -= damage;
         }
+        else if(other.tag == "Wall")
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 }

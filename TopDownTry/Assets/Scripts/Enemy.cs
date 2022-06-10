@@ -15,6 +15,18 @@ public class Enemy : MonoBehaviour
     private GameObject corp;
 
     [SerializeField]
+    private GameObject gun;
+
+    [SerializeField]
+    private Transform firingPoint;
+
+    [SerializeField]
+    private GameObject projectile;
+
+    [SerializeField]
+    private float firingSpeed;
+
+    [SerializeField]
     private float pointsToGive;
     
 
@@ -27,6 +39,8 @@ public class Enemy : MonoBehaviour
     public float minDistance;
     //public Transform target;
 
+    private float lastTimeShot = 0;
+
     NavMeshAgent nav;
    
     //Methods
@@ -38,10 +52,18 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         
     }
+    public void Shoot()
+    {
+        if (lastTimeShot + firingSpeed < Time.time)
+        {
+            lastTimeShot = Time.time;
+            Instantiate(projectile, firingPoint.position, firingPoint.rotation);
+        }
+    }
     public void Update()
     {
-        float x = transform.position.x;
-        float z = transform.position.z;
+        float x = this.transform.position.x;
+        float z = this.transform.position.z;
 
         anim.SetFloat("Speed", Mathf.Abs(x-curent_x)+Mathf.Abs(z-curent_z)); 
 
@@ -49,14 +71,14 @@ public class Enemy : MonoBehaviour
         curent_z = z;
 
         //nav.SetDestination(player.transform.position);
-        float distance = Vector3.Distance(player.transform.position, transform.position);
+        float distance = Vector3.Distance(player.transform.position, this.transform.position);
         this.transform.LookAt(player.transform);
 
         if (distance < minDistance && player.transform.hasChanged)
         {
 
             
-            nav.SetDestination(player.transform.position);
+            this.nav.SetDestination(player.transform.position);
 
         }
 
@@ -70,7 +92,7 @@ public class Enemy : MonoBehaviour
         {
             if(distance < minDistance && player.transform.hasChanged)
             {
-                EnemyGun.Instance.Shoot();
+                Shoot();
             }
         }
         if (shot && currentTime < waitTime)
@@ -88,12 +110,24 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         player.GetComponent<PlayerController>().points += pointsToGive;
+
+        float playerPoints = player.GetComponent<PlayerController>().points;
+
+        if (PlayerPrefs.HasKey("highScore"))
+        {
+            if (playerPoints > PlayerPrefs.GetFloat("highScore"))
+            {
+                PlayerPrefs.SetFloat("highScore", playerPoints);
+                PlayerPrefs.Save();
+            }
+        }
+        else
+        {   
+            PlayerPrefs.SetFloat("highScore", playerPoints);
+            PlayerPrefs.Save();
+        }
+        EnemySpawn.Instance.enemyCount-=1;
         Destroy(this.gameObject);
         
-    }
-    public void Shoot()
-    {
-        shot = true;
-        //print("Shot");
     }
 }

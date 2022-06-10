@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 455924}
   - component: {fileID: 3371334}
-  - component: {fileID: 3381521665140460316}
   - component: {fileID: 2334102}
   m_Layer: 0
   m_Name: w_flamethrower
@@ -42,22 +41,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100152}
   m_Mesh: {fileID: 4300516, guid: 3d06f9e13e57b434dbbb7e7b64c158e1, type: 3}
---- !u!114 &3381521665140460316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b236269c64388c4cbd1141aaa649ca6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firingPoint: {fileID: 3946562521225546685}
-  projectile: {fileID: 8968108523173035623, guid: 73a23b214c50ef24c9b6a4a4f8052707, type: 3}
-  Corp: {fileID: 187294}
-  firingSpeed: 0.6
 --- !u!23 &2334102
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1029,6 +1012,10 @@ MonoBehaviour:
   health: 100
   waitTime: 3
   corp: {fileID: 187294}
+  gun: {fileID: 100152}
+  firingPoint: {fileID: 3946562521225546685}
+  projectile: {fileID: 8968108523173035623, guid: 73a23b214c50ef24c9b6a4a4f8052707, type: 3}
+  firingSpeed: 1
   pointsToGive: 10
   minDistance: 10
 --- !u!195 &-3992024483524616409

@@ -16,12 +16,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public float points;
 
+    [SerializeField]
+    private float highScore;
+
     private Animator anim;
 
 
     void Start()
     {
         anim = corp.GetComponent<Animator>();
+        if (PlayerPrefs.HasKey("highScore")) {
+            highScore = PlayerPrefs.GetFloat("highScore");
+        } else {
+            highScore = 0;
+        }
     }
 
     // Update is called once per frame
@@ -67,6 +75,11 @@ public class PlayerController : MonoBehaviour
     {
         if(phealth <= 0)
         {
+            if (highScore > PlayerPrefs.GetFloat("highScore"))
+            {
+                PlayerPrefs.SetFloat("highScore", highScore);
+                PlayerPrefs.Save();
+            }
             Destroy(this.gameObject);
             Application.Quit();
         }

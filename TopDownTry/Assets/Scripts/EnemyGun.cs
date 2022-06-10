@@ -16,6 +16,8 @@ public class EnemyGun : MonoBehaviour
     [SerializeField]
     private float firingSpeed;
 
+    
+
     public static EnemyGun Instance;
 
     private float lastTimeShot = 0;
