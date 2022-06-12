@@ -28,6 +28,9 @@ public class Enemy : MonoBehaviour
 
     [SerializeField]
     private float pointsToGive;
+
+    [SerializeField]
+    private GameObject MuzzleFlash;
     
 
     private float currentTime;
@@ -58,8 +61,19 @@ public class Enemy : MonoBehaviour
         {
             lastTimeShot = Time.time;
             Instantiate(projectile, firingPoint.position, firingPoint.rotation);
+            MuzzleFlash.SetActive(true);
+            StartCoroutine(wait());
         }
     }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(0.04f);
+        MuzzleFlash.SetActive(false);
+    }
+
+
+
     public void Update()
     {
         float x = this.transform.position.x;
@@ -130,4 +144,6 @@ public class Enemy : MonoBehaviour
         Destroy(this.gameObject);
         
     }
+    
+    
 }

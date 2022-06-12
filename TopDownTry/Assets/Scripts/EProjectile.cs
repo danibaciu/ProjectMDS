@@ -43,6 +43,7 @@ public class EProjectile : MonoBehaviour
         {
             triggeringPlayer = other.gameObject;
             triggeringPlayer.GetComponent<PlayerController>().phealth -= damage;
+            Destroy(this.gameObject);
         }
         else if(other.tag == "Wall")
         {

@@ -13,6 +13,9 @@ public class PlayerGun : MonoBehaviour
     [SerializeField]
     float firingSpeed;
 
+    [SerializeField]
+    private GameObject MuzzleFlash;
+
     public static PlayerGun Instance;
 
     private float lastTimeShot = 0;
@@ -28,6 +31,13 @@ public class PlayerGun : MonoBehaviour
         {
             lastTimeShot = Time.time;
             Instantiate(projectile, firingPoint.position, firingPoint.rotation);
+            MuzzleFlash.SetActive(true);
+            StartCoroutine(wait());
         }
+    }
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(0.04f);
+        MuzzleFlash.SetActive(false);
     }
 }
