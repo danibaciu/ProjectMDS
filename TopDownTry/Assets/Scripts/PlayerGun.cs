@@ -16,6 +16,8 @@ public class PlayerGun : MonoBehaviour
     [SerializeField]
     private GameObject MuzzleFlash;
 
+
+    private AudioSource mAudioSrc;
     public static PlayerGun Instance;
 
     private float lastTimeShot = 0;
@@ -23,6 +25,7 @@ public class PlayerGun : MonoBehaviour
     void Start()
     {
         Instance = GetComponent<PlayerGun>();
+        mAudioSrc=GetComponent<AudioSource>();
     }
 
     public void Shoot()
@@ -32,6 +35,7 @@ public class PlayerGun : MonoBehaviour
             lastTimeShot = Time.time;
             Instantiate(projectile, firingPoint.position, firingPoint.rotation);
             MuzzleFlash.SetActive(true);
+            mAudioSrc.Play();
             StartCoroutine(wait());
         }
     }

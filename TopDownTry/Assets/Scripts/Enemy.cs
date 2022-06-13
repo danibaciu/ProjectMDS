@@ -31,8 +31,11 @@ public class Enemy : MonoBehaviour
 
     [SerializeField]
     private GameObject MuzzleFlash;
-    
 
+    [SerializeField]
+    private int eType;
+
+    private AudioSource mAudioSrc;
     private float currentTime;
     private GameObject player;
     private bool shot;
@@ -53,6 +56,7 @@ public class Enemy : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
         anim = corp.GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
+        mAudioSrc=GetComponent<AudioSource>();
         
     }
     public void Shoot()
@@ -62,6 +66,7 @@ public class Enemy : MonoBehaviour
             lastTimeShot = Time.time;
             Instantiate(projectile, firingPoint.position, firingPoint.rotation);
             MuzzleFlash.SetActive(true);
+            mAudioSrc.Play();
             StartCoroutine(wait());
         }
     }
@@ -140,10 +145,19 @@ public class Enemy : MonoBehaviour
             PlayerPrefs.SetFloat("highScore", playerPoints);
             PlayerPrefs.Save();
         }
-        EnemySpawn.Instance.enemyCount-=1;
+        if(eType == 0)
+        {
+            EnemySpawn.Instance.enemyCount-=1;
+        }
+        else if(eType == 1)
+        {
+            EnemySpawner2.Instance.enemyCount-=1;
+        }
         Destroy(this.gameObject);
         
     }
+
+
     
     
 }

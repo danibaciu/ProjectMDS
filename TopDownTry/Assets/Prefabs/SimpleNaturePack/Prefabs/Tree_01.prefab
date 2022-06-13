@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2222111361402594220}
   - component: {fileID: 6601886996393371248}
   - component: {fileID: -2318088195001092124}
+  - component: {fileID: 1564623676000041973}
   m_Layer: 0
   m_Name: Tree_01
   m_TagString: Wall
@@ -113,3 +114,16 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.066, y: 2.7810001, z: 0.098000005}
   m_TimeToStationary: 0.5
+--- !u!65 &1564623676000041973
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222111361404534124}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7310517, y: 5.561799, z: 2.4410653}
+  m_Center: {x: -0.06559682, y: 2.780911, z: 0.098100185}
